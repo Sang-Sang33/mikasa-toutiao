@@ -1,0 +1,572 @@
+/* ----------------------------------------------------通用样式------------------------------------------------ */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.fixed::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    background-color: #fff;
+}
+
+[type="button"] {
+    cursor: pointer;
+}
+
+.fLeft {
+    float: left;
+}
+
+.fRight {
+    float: right;
+}
+
+h3.active {
+    color: #3eede7;
+    border-bottom: 2px solid brown;
+}
+
+/* -----------------------------------------------------------------头部--------------------------------------- */
+#header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #3d3b4f;
+}
+
+#header h2 {
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------中间主要内容 -----------------------------------*/
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#content .main {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+#content .main .articles{
+    width: 80%;
+}
+
+#content .main .articles ul .items {
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #999;
+}
+/* ----------------------------------------------------------------中间内容发布输入框------------------------- */
+#content .publish_Box {
+    width: 80%;
+}
+
+#content .publish_Box .publish_title{
+    margin: 20px 0; 
+}
+
+#content .publish_Box .publish_title > h3{
+    display: inline;
+    margin: 0 20px;
+    font-weight: normal;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#content .publish_Box .publish_Story textarea {
+    text-indent: 2em;
+    font-size: 16px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    height: 200px;
+    line-height: 30px;
+    border: 2px solid #666;
+}
+
+#content .publish_Box .publish_Story .publish_Story_btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+#content .publish_Box .publish_Story .publish_Story_btn [value="图片"],
+#content .publish_Box .publish_Story .publish_Story_btn [value="发布"]{
+    width: 100px;
+    height: 40px;
+    background-color: #ff3300;
+    border-radius: 10px;
+}
+
+#content .publish_Box .publish_Story .publish_Story_btn  h3,
+#content .publish_Box .publish_Story .publish_Story_btn  [type="file"]{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#content .publish_Box .publish_Story .publish_Story_btn  h3 {
+    text-align: center;
+    line-height: 100px;
+    border: 1px dashed #666;
+    font-size: 30px;
+    background-color: #e9f1f6;
+}
+
+#content .publish_Box .publish_Story .publish_Story_btn  [type="file"] {
+    opacity: 0;
+}
+
+#content .publish_Box .publish_Article {
+    margin-bottom: 20px;    
+}
+
+#content .publish_Box .publish_Article>[type="text"] {
+    padding: 0 20px;
+    height: 30px;
+    width: 90%;
+    border: 2px solid #666;
+}
+
+#content .publish_Box .publish_Article .quillWrapper{
+    border: 2px solid #666;
+    margin: 20px 0;
+}
+
+#content .publish_Box .publish_Article>[value="发布"] {
+    width: 100px;
+    height: 40px;
+    background-color: #ff3300;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 400px;
+}
+
+#content .publish_Box .publish_Article .quillWrapper .ql-blank {
+    padding: 20px;
+}
+
+#content .publish_Box .reloadBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 2px solid #44cef6;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#content .publish_Box .reloadBtn>input {
+    color: #1685a9;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* -------------------------------------------------------中间文章与头条主体---------------------------------- */
+#content .main .articles ul .items img {
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+}
+
+#content .main .articles ul .items .userMsg {
+    margin: 10px 0;
+}
+
+#content .main .articles ul .items .userMsg>h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+}
+
+#content .main .articles ul .items .userInfo>div>span {
+    color: #000;
+}
+/* --------------------------------------------------------中间左侧导航栏------------------------------------ */
+#content .aside {
+    width: 15%;
+}
+
+#content .aside .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#content .aside .nav>h3 {
+    color: #ff461f;
+}
+#content .aside .nav>li,
+#content .aside .nav>h3 {
+    align-self: center;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* -------------------------------------------------------右侧用户信息栏---------------------------------------- */
+#content .rigtLogin {
+    /* position: fixed; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content .rigtLogin .search {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 95%;
+    align-self: center;
+}
+
+#content .rigtLogin .search input {
+    height: 40px;
+}
+
+#content .rigtLogin .search [placeholder = '搜索站内资料'] {
+    border: 1px solid #6b6882;
+    width: 80%;
+    text-indent: 2em;
+}
+
+#content .rigtLogin .search [value = '搜索'] {
+    width: 20%;
+    background-color: #177cb0;
+    height: 42px;
+    color: #a1afc9;
+    font-size: 18px;
+}
+
+/* ---------------------------------------------右侧登录之前的登录窗--------------------------------------------- */
+#content .rigtLogin .loginWindow {
+    /* position: fixed; */
+    width: 70%;
+    height: 200px; 
+    padding: 50px;
+    margin-top: 50px;
+    align-self: center;
+    border: 1px solid #999;
+}
+
+#content .rigtLogin .loginWindow span {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 30px;
+}
+
+#content .rigtLogin .loginWindow>input {
+    margin-top: 80px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #c83c23;
+}
+/* -------------------------------------------登录之后的用户信息栏---------------------------------------------- */
+#content .rigtLogin .userInfo {
+    align-self: center;
+    width: 86%;
+    height: 300px;
+    border: 1px solid #999;
+    padding: 0 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#content .rigtLogin .userInfo .totalMsg .tt_count,
+#content .rigtLogin .userInfo .totalMsg .article_count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#content .rigtLogin .userInfo .logout [value="退出登录"] {
+    color: #999;
+    background-color: #fff;
+    cursor: pointer;
+}
+#content .rigtLogin .userInfo .logout [value="退出登录"]:hover {
+    color: blueviolet;
+}
+
+#content .rigtLogin .userInfo .userImg {
+    text-align: center;
+}
+
+#content .rigtLogin .userInfo .userImg img {
+    width: 120px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#content .rigtLogin .userInfo .userImg span {
+    display: block;
+}
+
+#content .rigtLogin .userInfo .logout {
+    align-self: flex-end;
+}
+
+/* ---------------------------------------------------登录页面---------------------------------------------- */
+
+#loginPage{
+    position: fixed;
+    left:50%;
+    top: 50%;
+    margin-top: -175px;
+    margin-left: -250px;
+    width: 460px;
+    padding: 0 20px;
+    border: 1px solid #666;
+}
+
+#loginPage input{
+    width: 100%;
+    display: block;
+    height: 50px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+#loginPage [type="text"],
+#loginPage [type="password"]
+{
+    border: 1px solid #999;
+    text-indent: 2em;
+    background-color: #faff72;
+}
+
+#loginPage [type="button"] {
+    background-color: #c32138;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginPage h3  {
+    text-align: center;
+    font-weight: normal;
+    margin: 10px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #666;
+}
+
+#loginPage span
+{
+    /* display: block; */
+    font-size: 14px;
+    margin: 20px 0;
+}
+#loginPage .registerLink
+ {
+    border-bottom: 1px solid #999;
+    
+}
+#loginPage .registerLink a
+{
+    color: #4b5cc4;
+}
+#loginPage .userAgreement {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+/*-------------------------------------------------用户中心页面----------------------------------------------- */
+
+#userCenter {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#userCenter>.userMsg {
+    margin-left: 20px;
+}
+#userCenter>.userMsg>img {
+    border-radius: 50%;
+    width: 60px;
+    vertical-align: middle;
+}
+
+#userCenter>.userMsg>span {
+    margin: 0 20px;
+}
+#userCenter>.userMsg>[value="编辑"],
+#userCenter .tt_Msg>li>.contentBox .btn>input {
+    font-size: 16px;
+    color: #ffa631;
+    background-color: #fff;
+    cursor: pointer;
+}
+#userCenter>.userCenterTitle {
+    margin-top: 20px;
+    border-bottom: 1px solid #666;
+    display: flex;
+    flex-direction: row;
+}
+#userCenter>.userCenterTitle>h3{
+    display: block;
+    margin: 0 20px;
+    font-weight: normal;
+    padding: 10px;
+    cursor: pointer;
+}
+#userCenter .tt_Msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#userCenter .tt_Msg>li .userImagAndName>img{
+    border-radius: 50%;
+    width: 40px;
+    vertical-align: middle;
+}
+#userCenter .tt_Msg>li .contentBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#userCenter .tt_Msg>li .contentBox .publishContent img {
+    width: 200px;
+}
+
+#userCenter .tt_Msg>li{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+    margin: 10px 20px;
+}
+
+#userCenter .tt_Msg>li>*{
+    margin: 10px 0;
+}
+
+/* -----------------------------------------用户信息修改页面---------------------------------------------- */
+
+
+#userDataModify .modifyTitle {
+    margin-top: 20px;
+    border-bottom: 1px solid #666;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#userDataModify .modifyTitle > h3{
+    display: block;
+    margin: 0 20px;
+    font-weight: normal;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#userDataModify table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#userDataModify table tr td {
+    padding: 20px;
+}
+
+#userDataModify table tr td>span {
+    /* height: 50px; */
+    font-size: 16px;
+    text-align: center;
+}
+
+#userDataModify table tr td>[type="text"],
+#userDataModify table tr td>[type="password"]{
+    /* text-align: left; */
+    text-indent: 2em;
+    font-size: 16px;
+    height: 30px;
+    border: 1px solid blue;
+    width: 400px;
+}
+#userDataModify table tr td>[value="更新资料"] {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4b5cc4;
+    cursor: pointer;
+}
+#userDataModify .userName tr .img>img{
+    width: 120px;
+}
+
+/*----------------------------------------文章详情页----------------------------------------*/
+html,body,#app,#newsDetail{
+    height: 100%;
+}
+
+#newsDetail {
+    margin-left: 20px;
+    width: 80%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-around;
+    /* height: 800px; */
+}
+#newsDetail .profilePhoto>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+#newsDetail h3,
+#newsDetail .newsContent,
+#newsDetail .created_date{
+    flex-grow: 1;
+}
+#newsDetail .profilePhoto {
+    flex-grow: 2;
+}
+#newsDetail .pic {
+    flex-grow: 3;
+}
