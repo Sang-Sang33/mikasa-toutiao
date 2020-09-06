@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # mikasa-toutiao
-=======
-# proj
-
+基于vue-router-vuex-axios类头条项目
 ## Project setup
 ```
 npm install
